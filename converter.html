@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal to other Base</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 150px;
+            height: 100vh;
+        }
+
+        .flex-item {
+            width: 60%;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-item">
+            <h3>Base 10 to Base 2, 8 or 16</h3>
+            <form>
+                <div class="form-group">
+                    <label for="decimal">Decimal Number</label>
+                    <input type="number" class="form-control" id="decimal">
+                </div>
+                <div class="form-group">
+                    <label for="base">Convert To</label>
+                    <select class="form-control" id="base">
+                        <option value="2">Binary</option>
+                        <option value="8">Octal</option>
+                        <option value="16">HexaDecimal</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-success" onclick="convert()" style="margin-bottom: 5px;">Convert</button>
+                <div class="form-group">
+                    <label for="result">Result</label>
+                    <textarea class="form-control" id="result" rows="3" disabled></textarea>
+                  </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./converter.js"></script>
+</body>
+
+</html>
